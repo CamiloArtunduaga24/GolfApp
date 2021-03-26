@@ -44,8 +44,10 @@ enableNewNoticia = false;
     this.presentLoading();
     const path = 'Noticias';
     const name = this.newNoticias.nombre;
-    const resp = await this.firestorageService.uploadImage(this.newFile, path, name);
-    this.newNoticias.imagen = resp;
+    if(this.newFile !== undefined){
+      const resp = await this.firestorageService.uploadImage(this.newFile, path, name);
+      this.newNoticias.imagen = resp;
+    }
     this.firestoreService.createDoc(this.newNoticias, this.path, this.newNoticias.id ).then( resp =>{
          this.loading.dismiss();
          this.presentToast('Guardado con éxito');

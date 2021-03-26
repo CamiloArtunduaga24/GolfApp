@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import {Router} from '@angular/router';
+import { FirestoreService } from '../../services/firestore.service';
+import { Noticia } from '../../models';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +11,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  private path = 'Noticias/'
+
+  noticias: Noticia[] = [];
+
+   constructor( public menuController: MenuController,
+                public router:Router,
+                public firestoreService: FirestoreService ) { 
+                    this.loadNoticias();
+                }
 
   ngOnInit() {}
+
+   openMenu() { 
+     console.log('se abrio esta joda');
+     this.menuController.toggle('principal');
+   }
+
+   loadNoticias(){
+     this.firestoreService.getCollection<Noticia>(this.path).subscribe( resp => {
+      //  console.log(resp);
+       this.noticias = resp;
+       
+     });
+   }
+
 
 }

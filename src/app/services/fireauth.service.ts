@@ -6,9 +6,34 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class FireauthService {
 
-  constructor(public auth: AngularFireAuth) { }
+  constructor(public auth: AngularFireAuth) {
+
+    this.getUid();
+  }
 
   login(email: string, password: string){
-    this.auth.signInWithEmailAndPassword(email, password)
+    return this.auth.signInWithEmailAndPassword(email, password)
+  }
+
+  registrar( email: string, password: string ){
+    return this.auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  logout(){
+    return this.auth.signOut();
+  }
+
+  async getUid() {
+    const user = await this.auth.currentUser;
+    if(  user === null ) {
+      return null;
+    }else {
+      return user.uid;
+    }
+  }
+
+  estateAuth() {
+    return this.auth.authState;
+
   }
 }
