@@ -1,8 +1,8 @@
-import { Component, OnInit, enableProdMode } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertController, LoadingController, MenuController, ToastController } from '@ionic/angular';
 import { FirestoreService } from '../../services/firestore.service';
-import { Noticia } from '../../models';
 import { FirestorageService } from '../../services/firestorage.service';
+import { Noticia } from '../../models';
 
 @Component({
   selector: 'app-inicio',

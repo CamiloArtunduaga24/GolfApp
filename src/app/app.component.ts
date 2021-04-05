@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { FireauthService } from './services/fireauth.service';
+import { ReglamentoService } from './services/reglamento.service';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { FireauthService } from './services/fireauth.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private fireauthService: FireauthService) {}
+  constructor(private fireauthService: FireauthService,
+              public infoReglamento: ReglamentoService) {}
 }
 

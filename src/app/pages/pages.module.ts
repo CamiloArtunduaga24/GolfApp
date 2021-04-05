@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
+import { ReglamentoComponent } from './reglamento/reglamento.component';
+import { TarjetaComponent } from './tarjeta/tarjeta.component';
 
 
 
@@ -13,13 +15,15 @@ import { ComponentsModule } from '../components/components.module';
   declarations: [
     HomeComponent,
     PerfilComponent,
+    ReglamentoComponent,
+    TarjetaComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule,
     IonicModule,
-    ComponentsModule
+    ComponentsModule,
   ]
 })
 export class PagesModule { }

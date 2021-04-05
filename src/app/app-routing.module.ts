@@ -3,11 +3,18 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { InicioComponent } from './backend/inicio/inicio.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { TarjetaComponent } from './pages/tarjeta/tarjeta.component';
+import { ReglamentoComponent } from './pages/reglamento/reglamento.component';
+import { ReglaComponent } from './components/regla/regla.component';
+
 
 const routes: Routes = [
   {path: 'home', component:HomeComponent, },
   {path: 'inicio', component:InicioComponent },
   {path: 'perfil', component:PerfilComponent },
+  {path: 'tarjeta', component:TarjetaComponent },
+  {path: 'reglamento', component:ReglamentoComponent },
+  {path: 'regla/:id', component:ReglaComponent },
   {path: '', component: HomeComponent},
   {path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];

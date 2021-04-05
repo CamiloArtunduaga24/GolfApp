@@ -17,3 +17,31 @@ export interface Cliente {
     referencia: string,
     ubicacion: any;
 }
+
+// export interface InfoReglamento {
+    
+// }
+
+ export interface InfoReglamento {
+   titulo?: string;
+   regla?: string;
+   puntos?: string;
+   img?: string;
+ }
+
+// interface Puntos {
+//   '1': string;
+//   '2': string;
+//   '3': string;
+// }
+
+export interface Tarjeta {
+    tid: string,
+    marca: string,
+    handicap: string,
+    fecha: Date,
+}
+
+
+
+
