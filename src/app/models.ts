@@ -18,10 +18,6 @@ export interface Cliente {
     ubicacion: any;
 }
 
-// export interface InfoReglamento {
-    
-// }
-
  export interface InfoReglamento {
    titulo?: string;
    regla?: string;
@@ -29,11 +25,6 @@ export interface Cliente {
    img?: string;
  }
 
-// interface Puntos {
-//   '1': string;
-//   '2': string;
-//   '3': string;
-// }
 
 export interface Tarjeta {
     tid: string,

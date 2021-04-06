@@ -27,8 +27,7 @@ export class PerfilComponent implements OnInit {
   uid = '';
   suscriberUserInfo : Subscription;
   ingresaEnable = false;
-  showPassword = false;
-  passwordToggleIcon = 'eye';
+  
 
   constructor(public menuController: MenuController,
               public auth: FireauthService,
@@ -68,14 +67,6 @@ export class PerfilComponent implements OnInit {
     console.log(this.cliente);
   }
 
-  togglePassword(): void{
-    this.showPassword = !this.showPassword;
-    if(this.passwordToggleIcon == 'eye'){
-      this.passwordToggleIcon = 'eye-off'
-    }else{
-      this.passwordToggleIcon = 'eye';
-    }
-  }
 
   openMenu() { 
     console.log('se abrio esta joda');

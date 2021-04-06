@@ -67,6 +67,7 @@
         <ion-button *ngIf="!ingresaEnable" (click)=" ingresaEnable = true" class="normal" color="dark">ingresar</ion-button>
         <ion-button *ngIf="ingresaEnable" (click)=" ingresar()" class="normal" color="dark">Login</ion-button>
         <ion-button *ngIf="!ingresaEnable" (click)="registrarse()" class="normal" color="dark">Registrarse</ion-button>
+        <ion-button *ngIf="ingresaEnable" (click)="ingresaEnable = false" class="normal" color="dark">ó registrarse</ion-button>
        </div>  
     </div>
 
@@ -85,23 +86,16 @@
         <ion-label class="normal" >
           Celular {{cliente.celular}}
         </ion-label>
-        <ion-input [(ngModel)]="cliente.celular" class="normal"type="string"></ion-input >
-      </ion-item>
-  
-      <ion-item>
-        <ion-label class="normal" position="floating">
-         Nueva Contraseña
-        </ion-label>
-        <ion-input [(ngModel)]="cliente.password" class="normal"[type]="showPassword ? 'text' : 'password'"></ion-input >
-          <ion-icon slot="end" [name]="passwordToggleIcon" (click)=" togglePassword()"></ion-icon>
       </ion-item>
 
+
       <div style="text-align: end; margin:10px">
-            <ion-button (click)="guardarUser()" class="normal" color="dark">Actualizar</ion-button>
+        <ion-button [routerLink]="['/']" 
+                  (click)="guardarUser()" class="normal" color="dark">Guardar</ion-button>
       </div>
       <div style="text-align: end; margin:10px">
         <ion-button (click)="salir()" class="normal" color="dark">Salir</ion-button>
-  </div>
+      </div>
     </div>
 
 
