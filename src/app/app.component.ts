@@ -12,5 +12,14 @@ import { ReglamentoService } from './services/reglamento.service';
 export class AppComponent {
   constructor(private fireauthService: FireauthService,
               public infoReglamento: ReglamentoService) {}
+
+              toggleTheme(event){
+                if(event.detail.checked){
+                  document.body.setAttribute('color-theme','dark')
+                }else{
+                  document.body.setAttribute('color-theme','light')
+                }
+               }
+
 }
 

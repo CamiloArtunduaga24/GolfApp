@@ -21,9 +21,10 @@
     <hr>
     <ion-card-subtitle class="subtitulo"> {{regla.regla}} </ion-card-subtitle>
     <ion-card-subtitle class="normal">{{regla.puntos}}</ion-card-subtitle>
-    <ion-button (click)="verReglamento(i)">
-      <ion-icon slot="icon-only"  name="layers-outline"></ion-icon>
-    </ion-button>
+    <ion-item  (click)="verReglamento(i)" >
+      <ion-label class="normal-2">Ver más . . . </ion-label>
+      <ion-icon  slot="end" name="caret-forward-outline"></ion-icon>
+    </ion-item>
   </ion-card-header>
   
 </ion-card>

@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
+import { ReglaComponent } from './regla/regla.component';
 
 
 
 @NgModule({
   declarations: [
-    NoticiasComponent
+    NoticiasComponent,
+    ReglaComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
   ],
   exports: [
-    NoticiasComponent
+    NoticiasComponent,
+    
   ]
 })
 export class ComponentsModule { }
