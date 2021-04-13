@@ -15,7 +15,6 @@ export class ReglamentoComponent implements OnInit {
   constructor( public menuController: MenuController,
                public reglamento: ReglamentoService,
                private router: Router  ) {
-                 console.log("constructor");
                  
                 }
 

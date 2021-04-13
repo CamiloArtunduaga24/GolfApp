@@ -3,7 +3,6 @@ import { Platform } from '@ionic/angular';
 import { FireauthService } from './services/fireauth.service';
 import { ReglamentoService } from './services/reglamento.service';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

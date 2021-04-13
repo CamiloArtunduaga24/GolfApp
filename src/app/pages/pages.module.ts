@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
 import { ReglamentoComponent } from './reglamento/reglamento.component';
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
+import { ClimaComponent } from './clima/clima.component';
+
 
 
 
@@ -16,7 +18,8 @@ import { TarjetaComponent } from './tarjeta/tarjeta.component';
     HomeComponent,
     PerfilComponent,
     ReglamentoComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    ClimaComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +27,9 @@ import { TarjetaComponent } from './tarjeta/tarjeta.component';
     RouterModule,
     IonicModule,
     ComponentsModule,
+  ],
+  exports:[
+    ClimaComponent
   ]
 })
 export class PagesModule { }

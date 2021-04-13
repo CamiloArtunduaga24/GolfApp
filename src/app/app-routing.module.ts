@@ -6,6 +6,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { TarjetaComponent } from './pages/tarjeta/tarjeta.component';
 import { ReglamentoComponent } from './pages/reglamento/reglamento.component';
 import { ReglaComponent } from './components/regla/regla.component';
+import { ClimaComponent } from './pages/clima/clima.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'perfil', component:PerfilComponent },
   {path: 'tarjeta', component:TarjetaComponent },
   {path: 'reglamento', component:ReglamentoComponent },
+  {path: 'clima', component:ClimaComponent },
   {path: 'regla/:id', component:ReglaComponent },
   {path: '', component: HomeComponent},
   {path: '**', redirectTo: 'home', pathMatch: 'full'},
